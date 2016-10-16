@@ -32,13 +32,13 @@ var beenhere bool
 //
 // Do we want to display timestamps?
 //
-// Since I can't initialize a boolean to true, I'm going to make this an 
+// Since I can't initialize a boolean to true, I'm going to make this an
 // int with the following values:
 // 0 - uninitialized (defaults to true)
 // 1 - false
 // 2 - true
 //
-// I'm not sure if this is the best method, as I am still learning Go, 
+// I'm not sure if this is the best method, as I am still learning Go,
 // but it'll work for now!
 //
 var displayTime int
@@ -211,7 +211,7 @@ func Debugf(message string, v ...interface{}) {
 
 
 /**
-* Log a trace 
+* Log a trace
 */
 func Trace(message string) {
 	print (TraceLevel, "TRACE: " + message)
@@ -259,8 +259,8 @@ func print(level int, message string) {
 		// If displayTime is uninitialized, default to true
 		//
 		if (displayTime == 0 || displayTime == 2) {
-			now := time.Now()
-			elapsed := now.Sub(startTime)
+			//now := time.Now()
+			elapsed := time.Now().Format("15:04:05 MST 2006/01/02")
 			if (UseColor()) {
 				color_string := getColor(level)
 				color.Printf(color_string + "[%s] %s\n", elapsed, message)
