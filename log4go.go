@@ -151,14 +151,14 @@ func SetUseColor(use_color bool) {
 * Log an error
 */
 func Error(message string) {
-	print(ErrorLevel, "ERROR: " + message);
+	print(ErrorLevel, "[ERROR] " + message);
 }
 
 /**
 * This and all of the other "LevelF()" functions are wrappers for Printf.
 */
 func Errorf(message string, v ...interface{}) {
-	printf(ErrorLevel, "ERROR: " + message, v...)
+	printf(ErrorLevel, "[ERROR] " + message, v...)
 }
 
 
@@ -166,7 +166,7 @@ func Errorf(message string, v ...interface{}) {
 * Log a warning
 */
 func Warn(message string) {
-	print(WarnLevel, "WARN: " + message)
+	print(WarnLevel, "[WARN] " + message)
 }
 
 
@@ -174,7 +174,7 @@ func Warn(message string) {
 * This and all of the other "LevelF()" functions are wrappers for Printf.
 */
 func Warnf(message string, v ...interface{}) {
-	printf(WarnLevel, "WARN: " + message, v...)
+	printf(WarnLevel, "[WARN] " + message, v...)
 }
 
 
@@ -182,7 +182,7 @@ func Warnf(message string, v ...interface{}) {
 * Log info
 */
 func Info(message string) {
-	print(InfoLevel, "INFO: " + message)
+	print(InfoLevel, "[INFO] " + message)
 }
 
 
@@ -190,7 +190,7 @@ func Info(message string) {
 * This and all of the other "LevelF()" functions are wrappers for Printf.
 */
 func Infof(message string, v ...interface{}) {
-	printf(InfoLevel, "INFO: " + message, v...)
+	printf(InfoLevel, "[INFO] " + message, v...)
 }
 
 
@@ -206,7 +206,7 @@ func Debug(message string) {
 * This and all of the other "LevelF()" functions are wrappers for Printf.
 */
 func Debugf(message string, v ...interface{}) {
-	printf(DebugLevel, "DEBUG: " + message, v...)
+	printf(DebugLevel, "[DEBUG] " + message, v...)
 }
 
 
